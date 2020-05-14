@@ -1,15 +1,15 @@
 name: exitinfo
 description: Android ApplicationExitInfo wrapper
 version: 0.0.1
-author: janko.djuric22@gmail.com
-homepage:
+homepage: https://github.com/JankoLancer/flutter_exitinfo
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
   flutter: ">=1.10.0"
 
 dependencies:
-  protobuf: any
+  protobuf: ^1.0.1
+  fixnum: ^0.10.11
   flutter:
     sdk: flutter
 

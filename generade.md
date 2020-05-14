@@ -1,0 +1,1 @@
+protoc --dart_out=./lib/gen  ./protos/exitinfo.proto --plugin=protoc-gen-dart="/Users/lioneight/Desktop/Janko/flutter/.pub-cache/bin/protoc-gen-dart" 

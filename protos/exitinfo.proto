@@ -1,0 +1,69 @@
+// protoc --dart_out=./lib ./protos/exitinfo.proto
+
+syntax = "proto3";
+
+// `java_package` must match the package name you declare for `androidPackage` in your pubspec.yaml
+option java_package = "com.exitinfo.exitinfo";
+option java_outer_classname = "Protos";
+option objc_class_prefix = "Protos";
+
+message ExitInfoList {
+    repeated ExitInfo infos = 1;
+}
+
+message ExitInfo {
+    /* Return the defining kernel user identifier, maybe different from getRealUid and getPackageUid, 
+    if an external service has the android:useAppZygote set to true and was bound with the flag android.content.Context#BIND_EXTERNAL_SERVICE - 
+    in this case, this field here will be the kernel user identifier of the external service provider. */
+    int32 definingUid = 1;
+
+    /* The human readable description of the process's death, given by the system; could be null. */
+    string description = 2;
+
+    /* The importance of the process that it used to have before the death. */
+    int32 importance = 3;
+
+    /* Similar to realUid, it's the kernel user identifier that is assigned at the package installation time. */
+    int32 packageId = 4;
+
+    /* The process id of the process that died. */
+    int32 pid = 5;
+
+    /* The actual process name it was running with. */
+    string processname = 6;
+
+    /* Last proportional set size of the memory that the process had used in kB. */
+    int64 pss = 7;
+
+    /* The kernel user identifier of the process, most of the time the system uses this to do access control checks. */
+    int32 realUid = 8;
+
+    /* The reason code of the process's death. */
+    ExitReason reason = 9;
+
+    /* Last resident set size of the memory that the process had used in kB. */
+    int64 rss = 10;
+
+    /* The exit status argument of exit() if the application calls it, or the signal number if the application is signaled. */
+    int32 status = 11;
+
+    /* The timestamp of the process's death, in milliseconds since the epoch, as returned by System.currentTimeMillis(). */
+    int64 timestamp = 12;
+}
+
+enum ExitReason {
+    REASON_UNKNOWN = 0;
+    REASON_EXIT_SELF = 1;
+    REASON_SIGNALED = 2;
+    REASON_LOW_MEMORY = 3;
+    REASON_CRASH = 4;
+    REASON_CRASH_NATIVE = 5;
+    REASON_ANR = 6;
+    REASON_INITIALIZATION_FAILURE = 7;
+    REASON_PERMISSION_CHANGE = 8;
+    REASON_EXCESSIVE_RESOURCE_USAGE = 9;
+    REASON_USER_REQUESTED = 10;
+    REASON_USER_STOPPED = 11;
+    REASON_DEPENDENCY_DIED = 12;
+    REASON_OTHER = 13;
+}

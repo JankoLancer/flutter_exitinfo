@@ -17,15 +17,17 @@ export 'exitinfo.pbenum.dart';
 class ExitInfoList extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExitInfoList', createEmptyInstance: create)
     ..pc<ExitInfo>(1, 'infos', $pb.PbFieldType.PM, subBuilder: ExitInfo.create)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   ExitInfoList._() : super();
   factory ExitInfoList() => create();
-  factory ExitInfoList.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ExitInfoList.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory ExitInfoList.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExitInfoList.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExitInfoList clone() => ExitInfoList()..mergeFromMessage(this);
-  ExitInfoList copyWith(void Function(ExitInfoList) updates) => super.copyWith((message) => updates(message as ExitInfoList));
+  ExitInfoList copyWith(void Function(ExitInfoList) updates) =>
+      super.copyWith((message) => updates(message as ExitInfoList));
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ExitInfoList create() => ExitInfoList._();
@@ -49,17 +51,19 @@ class ExitInfo extends $pb.GeneratedMessage {
     ..aOS(6, 'processname')
     ..aInt64(7, 'pss')
     ..a<$core.int>(8, 'realUid', $pb.PbFieldType.O3, protoName: 'realUid')
-    ..e<ExitReason>(9, 'reason', $pb.PbFieldType.OE, defaultOrMaker: ExitReason.REASON_UNKNOWN, valueOf: ExitReason.valueOf, enumValues: ExitReason.values)
+    ..e<ExitReason>(9, 'reason', $pb.PbFieldType.OE,
+        defaultOrMaker: ExitReason.REASON_UNKNOWN, valueOf: ExitReason.valueOf, enumValues: ExitReason.values)
     ..aInt64(10, 'rss')
     ..a<$core.int>(11, 'status', $pb.PbFieldType.O3)
     ..aInt64(12, 'timestamp')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   ExitInfo._() : super();
   factory ExitInfo() => create();
-  factory ExitInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ExitInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory ExitInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExitInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
   ExitInfo clone() => ExitInfo()..mergeFromMessage(this);
   ExitInfo copyWith(void Function(ExitInfo) updates) => super.copyWith((message) => updates(message as ExitInfo));
   $pb.BuilderInfo get info_ => _i;
@@ -74,7 +78,10 @@ class ExitInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.int get definingUid => $_getIZ(0);
   @$pb.TagNumber(1)
-  set definingUid($core.int v) { $_setSignedInt32(0, v); }
+  set definingUid($core.int v) {
+    $_setSignedInt32(0, v);
+  }
+
   @$pb.TagNumber(1)
   $core.bool hasDefiningUid() => $_has(0);
   @$pb.TagNumber(1)
@@ -83,7 +90,10 @@ class ExitInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.String get description => $_getSZ(1);
   @$pb.TagNumber(2)
-  set description($core.String v) { $_setString(1, v); }
+  set description($core.String v) {
+    $_setString(1, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasDescription() => $_has(1);
   @$pb.TagNumber(2)
@@ -92,7 +102,10 @@ class ExitInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.int get importance => $_getIZ(2);
   @$pb.TagNumber(3)
-  set importance($core.int v) { $_setSignedInt32(2, v); }
+  set importance($core.int v) {
+    $_setSignedInt32(2, v);
+  }
+
   @$pb.TagNumber(3)
   $core.bool hasImportance() => $_has(2);
   @$pb.TagNumber(3)
@@ -101,7 +114,10 @@ class ExitInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.int get packageId => $_getIZ(3);
   @$pb.TagNumber(4)
-  set packageId($core.int v) { $_setSignedInt32(3, v); }
+  set packageId($core.int v) {
+    $_setSignedInt32(3, v);
+  }
+
   @$pb.TagNumber(4)
   $core.bool hasPackageId() => $_has(3);
   @$pb.TagNumber(4)
@@ -110,7 +126,10 @@ class ExitInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.int get pid => $_getIZ(4);
   @$pb.TagNumber(5)
-  set pid($core.int v) { $_setSignedInt32(4, v); }
+  set pid($core.int v) {
+    $_setSignedInt32(4, v);
+  }
+
   @$pb.TagNumber(5)
   $core.bool hasPid() => $_has(4);
   @$pb.TagNumber(5)
@@ -119,7 +138,10 @@ class ExitInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.String get processname => $_getSZ(5);
   @$pb.TagNumber(6)
-  set processname($core.String v) { $_setString(5, v); }
+  set processname($core.String v) {
+    $_setString(5, v);
+  }
+
   @$pb.TagNumber(6)
   $core.bool hasProcessname() => $_has(5);
   @$pb.TagNumber(6)
@@ -128,7 +150,10 @@ class ExitInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $fixnum.Int64 get pss => $_getI64(6);
   @$pb.TagNumber(7)
-  set pss($fixnum.Int64 v) { $_setInt64(6, v); }
+  set pss($fixnum.Int64 v) {
+    $_setInt64(6, v);
+  }
+
   @$pb.TagNumber(7)
   $core.bool hasPss() => $_has(6);
   @$pb.TagNumber(7)
@@ -137,7 +162,10 @@ class ExitInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.int get realUid => $_getIZ(7);
   @$pb.TagNumber(8)
-  set realUid($core.int v) { $_setSignedInt32(7, v); }
+  set realUid($core.int v) {
+    $_setSignedInt32(7, v);
+  }
+
   @$pb.TagNumber(8)
   $core.bool hasRealUid() => $_has(7);
   @$pb.TagNumber(8)
@@ -146,7 +174,10 @@ class ExitInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   ExitReason get reason => $_getN(8);
   @$pb.TagNumber(9)
-  set reason(ExitReason v) { setField(9, v); }
+  set reason(ExitReason v) {
+    setField(9, v);
+  }
+
   @$pb.TagNumber(9)
   $core.bool hasReason() => $_has(8);
   @$pb.TagNumber(9)
@@ -155,7 +186,10 @@ class ExitInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $fixnum.Int64 get rss => $_getI64(9);
   @$pb.TagNumber(10)
-  set rss($fixnum.Int64 v) { $_setInt64(9, v); }
+  set rss($fixnum.Int64 v) {
+    $_setInt64(9, v);
+  }
+
   @$pb.TagNumber(10)
   $core.bool hasRss() => $_has(9);
   @$pb.TagNumber(10)
@@ -164,7 +198,10 @@ class ExitInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $core.int get status => $_getIZ(10);
   @$pb.TagNumber(11)
-  set status($core.int v) { $_setSignedInt32(10, v); }
+  set status($core.int v) {
+    $_setSignedInt32(10, v);
+  }
+
   @$pb.TagNumber(11)
   $core.bool hasStatus() => $_has(10);
   @$pb.TagNumber(11)
@@ -173,10 +210,12 @@ class ExitInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $fixnum.Int64 get timestamp => $_getI64(11);
   @$pb.TagNumber(12)
-  set timestamp($fixnum.Int64 v) { $_setInt64(11, v); }
+  set timestamp($fixnum.Int64 v) {
+    $_setInt64(11, v);
+  }
+
   @$pb.TagNumber(12)
   $core.bool hasTimestamp() => $_has(11);
   @$pb.TagNumber(12)
   void clearTimestamp() => clearField(12);
 }
-

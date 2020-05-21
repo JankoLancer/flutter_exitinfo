@@ -49,4 +49,3 @@ const ExitInfo$json = const {
     const {'1': 'timestamp', '3': 12, '4': 1, '5': 3, '10': 'timestamp'},
   ],
 };
-

@@ -7,6 +7,7 @@
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ExitReason extends $pb.ProtobufEnum {
@@ -25,7 +26,7 @@ class ExitReason extends $pb.ProtobufEnum {
   static const ExitReason REASON_DEPENDENCY_DIED = ExitReason._(12, 'REASON_DEPENDENCY_DIED');
   static const ExitReason REASON_OTHER = ExitReason._(13, 'REASON_OTHER');
 
-  static const $core.List<ExitReason> values = <ExitReason> [
+  static const $core.List<ExitReason> values = <ExitReason>[
     REASON_UNKNOWN,
     REASON_EXIT_SELF,
     REASON_SIGNALED,
@@ -47,4 +48,3 @@ class ExitReason extends $pb.ProtobufEnum {
 
   const ExitReason._($core.int v, $core.String n) : super(v, n);
 }
-

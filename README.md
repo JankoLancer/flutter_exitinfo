@@ -1,6 +1,6 @@
 # exitinfo
 
-Wrapper for ApplicationExitInfo API
+ApplicationExitInfo API describes the information of previous application process's death
 
 ## Getting Started
 
@@ -8,6 +8,8 @@ This plugin is wrapper for [ApplicationExitInfo](https://developer.android.com/r
 that was added in API level R. ApplicationExitInfo API describes the information of previous application process's death.
 
 Plugin provided all information that can be retrieved from native android code.
+
+IMPORTANT: Until Android R is officially published, this package can only be tested devices with installed beta version of Android R.
 
 ## Usage
 

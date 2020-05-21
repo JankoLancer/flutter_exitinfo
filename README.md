@@ -1,6 +1,6 @@
 # exitinfo
 
-ApplicationExitInfo API describes the information of previous application process's death
+Wrapper for ApplicationExitInfo API
 
 ## Getting Started
 

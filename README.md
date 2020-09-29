@@ -5,11 +5,9 @@ Wrapper for ApplicationExitInfo API
 ## Getting Started
 
 This plugin is wrapper for [ApplicationExitInfo](https://developer.android.com/reference/kotlin/android/app/ApplicationExitInfo#getImportance()) Android API
-that was added in API level R. ApplicationExitInfo API describes the information of previous application process's death.
+that was added in API level 30. ApplicationExitInfo API describes the information of previous application process's death.
 
 Plugin provided all information that can be retrieved from native android code.
-
-IMPORTANT: Until Android R is officially published, this package can only be tested devices with installed beta version of Android R.
 
 ## Usage
 

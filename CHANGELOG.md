@@ -1,3 +1,12 @@
+## 0.2.1
+
+* Change description
+
+## 0.2.0
+
+* Update to Android 30
+* Fix NPE when some property is null
+
 ## 0.1.1
 
 * Fix description

@@ -50,7 +50,7 @@ protobuf {
 }
 
 android {
-    compileSdkVersion 'android-R'
+    compileSdkVersion 30
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -59,7 +59,7 @@ android {
     }
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 'R'
+        targetSdkVersion 30
     }
     lintOptions {
         disable 'InvalidPackage'

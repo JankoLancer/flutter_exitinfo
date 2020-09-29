@@ -1,3 +1,5 @@
+export 'gen/protos/exitinfo.pb.dart';
+
 import 'dart:async';
 import 'dart:typed_data';
 

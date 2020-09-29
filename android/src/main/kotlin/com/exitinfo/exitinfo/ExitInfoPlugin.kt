@@ -5,6 +5,7 @@ import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build
 import androidx.annotation.NonNull
+import androidx.annotation.RequiresApi
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
@@ -47,7 +48,7 @@ public class ExitInfoPlugin : FlutterPlugin, MethodCallHandler {
 
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         if (call.method == "getExitInfo") {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R || Build.VERSION_CODES.R == 10000) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 val exitInfo = getExitInfo();
                 result.success(exitInfo.toByteArray());
             } else {
@@ -62,12 +63,28 @@ public class ExitInfoPlugin : FlutterPlugin, MethodCallHandler {
         channel.setMethodCallHandler(null)
     }
 
+    @RequiresApi(Build.VERSION_CODES.R)
     private fun getExitInfo(): Protos.ExitInfoList {
         val exitReasonList = mutableListOf<Protos.ExitInfo>()
         val activityManager: ActivityManager = applicationContext.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
         val exitReasons: List<ApplicationExitInfo> = activityManager.getHistoricalProcessExitReasons(/* packageName = */ null, /* pid = */ 0, /* maxNum = */ 5)
         for (reason in exitReasons) {
-            exitReasonList.add(Protos.ExitInfo.newBuilder().setDefiningUid(reason.definingUid).setDescription(reason.description).setImportance(reason.importance).setPackageId(reason.packageUid).setPid(reason.pid).setProcessname(reason.processName).setPss(reason.pss).setRealUid(reason.realUid).setReason(Protos.ExitReason.forNumber(reason.reason)).setRss(reason.rss).setStatus(reason.status).setTimestamp(reason.timestamp).build());
+            val newBuilder = Protos.ExitInfo.newBuilder();
+            if(reason.definingUid != null) newBuilder.setDefiningUid(reason.definingUid);
+            if(reason.description != null) newBuilder.setDescription(reason.description);
+            if(reason.importance != null) newBuilder.setImportance(reason.importance);
+            if(reason.packageUid != null) newBuilder.setPackageId(reason.packageUid);
+            if(reason.pid != null) newBuilder.setPid(reason.pid);
+            if(reason.processName != null) newBuilder.setProcessname(reason.processName);
+            if(reason.pss != null) newBuilder.setPss(reason.pss);
+            if(reason.realUid != null) newBuilder.setRealUid(reason.realUid);
+            if(reason.reason != null) newBuilder.setReason(Protos.ExitReason.forNumber(reason.reason));
+            if(reason.rss != null) newBuilder.setRss(reason.rss);
+            if(reason.status != null) newBuilder.setStatus(reason.status);
+            if(reason.timestamp != null) newBuilder.setTimestamp(reason.timestamp);
+            if(reason.definingUid != null) newBuilder.setDefiningUid(reason.definingUid);
+            if(reason.definingUid != null) newBuilder.setDefiningUid(reason.definingUid);
+            exitReasonList.add(newBuilder.build());
         }
 
         return Protos.ExitInfoList.newBuilder().addAllInfos(exitReasonList).build();

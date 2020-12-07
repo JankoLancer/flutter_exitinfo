@@ -1,3 +1,5 @@
+## 0.3.0
+* Use latest protobuf compiler
 ## 0.2.1
 
 * Change description

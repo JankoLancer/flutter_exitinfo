@@ -1,9 +1,9 @@
-import 'package:exitinfo/gen/protos/exitinfo.pb.dart';
-import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:flutter/services.dart';
 import 'package:exitinfo/exitinfo.dart';
+import 'package:exitinfo/gen/protos/exitinfo.pb.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,8 +15,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  List<ExitInfo> _exitInfoList;
-  String _err = "";
+  List<ExitInfo>? _exitInfoList;
+  String? _err = "";
 
   @override
   void initState() {
@@ -26,8 +26,8 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initExitInfo() async {
-    List<ExitInfo> exitInfoList;
-    String err;
+    List<ExitInfo>? exitInfoList;
+    String? err;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
       exitInfoList = await ExitInfoApi.exitinfo;
@@ -66,13 +66,19 @@ class _MyAppState extends State<MyApp> {
                           Row(
                             children: <Widget>[
                               Expanded(child: Text("Reason")),
-                              Expanded(flex: 2, child: Text(_exitInfoList[index].reason.name)),
+                              Expanded(
+                                  flex: 2,
+                                  child:
+                                      Text(_exitInfoList![index].reason.name)),
                             ],
                           ),
                           Row(
                             children: <Widget>[
                               Expanded(child: Text("Description")),
-                              Expanded(flex: 2, child: Text(_exitInfoList[index].description)),
+                              Expanded(
+                                  flex: 2,
+                                  child:
+                                      Text(_exitInfoList![index].description)),
                             ],
                           ),
                           Row(
@@ -81,7 +87,10 @@ class _MyAppState extends State<MyApp> {
                               Expanded(
                                   flex: 2,
                                   child: Text(
-                                      DateTime.fromMillisecondsSinceEpoch(_exitInfoList[index].timestamp.toInt())
+                                      DateTime.fromMillisecondsSinceEpoch(
+                                              _exitInfoList![index]
+                                                  .timestamp
+                                                  .toInt())
                                           .toString())),
                             ],
                           ),
@@ -90,7 +99,7 @@ class _MyAppState extends State<MyApp> {
                     );
                   },
                 )
-              : Text(_err),
+              : Text(_err!),
         ),
       ),
     );

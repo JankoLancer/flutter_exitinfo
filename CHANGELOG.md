@@ -1,5 +1,11 @@
+## 0.4.0
+
+* Migrate the plugin to null safety
+
 ## 0.3.0
+
 * Use latest protobuf compiler
+
 ## 0.2.1
 
 * Change description

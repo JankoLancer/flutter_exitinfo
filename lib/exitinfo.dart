@@ -1,10 +1,10 @@
-export 'gen/protos/exitinfo.pb.dart';
-
 import 'dart:async';
 import 'dart:typed_data';
 
 import 'package:exitinfo/gen/protos/exitinfo.pb.dart';
 import 'package:flutter/services.dart';
+
+export 'gen/protos/exitinfo.pb.dart';
 
 class ExitInfoApi {
   static const MethodChannel _channel = const MethodChannel('exitinfo');

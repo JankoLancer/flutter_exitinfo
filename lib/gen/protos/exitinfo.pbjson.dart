@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: protos/exitinfo.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use exitReasonDescriptor instead')
 const ExitReason$json = const {
   '1': 'ExitReason',
   '2': const [
@@ -25,6 +29,9 @@ const ExitReason$json = const {
   ],
 };
 
+/// Descriptor for `ExitReason`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List exitReasonDescriptor = $convert.base64Decode('CgpFeGl0UmVhc29uEhIKDlJFQVNPTl9VTktOT1dOEAASFAoQUkVBU09OX0VYSVRfU0VMRhABEhMKD1JFQVNPTl9TSUdOQUxFRBACEhUKEVJFQVNPTl9MT1dfTUVNT1JZEAMSEAoMUkVBU09OX0NSQVNIEAQSFwoTUkVBU09OX0NSQVNIX05BVElWRRAFEg4KClJFQVNPTl9BTlIQBhIhCh1SRUFTT05fSU5JVElBTElaQVRJT05fRkFJTFVSRRAHEhwKGFJFQVNPTl9QRVJNSVNTSU9OX0NIQU5HRRAIEiMKH1JFQVNPTl9FWENFU1NJVkVfUkVTT1VSQ0VfVVNBR0UQCRIZChVSRUFTT05fVVNFUl9SRVFVRVNURUQQChIXChNSRUFTT05fVVNFUl9TVE9QUEVEEAsSGgoWUkVBU09OX0RFUEVOREVOQ1lfRElFRBAMEhAKDFJFQVNPTl9PVEhFUhAN');
+@$core.Deprecated('Use exitInfoListDescriptor instead')
 const ExitInfoList$json = const {
   '1': 'ExitInfoList',
   '2': const [
@@ -32,6 +39,9 @@ const ExitInfoList$json = const {
   ],
 };
 
+/// Descriptor for `ExitInfoList`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List exitInfoListDescriptor = $convert.base64Decode('CgxFeGl0SW5mb0xpc3QSHwoFaW5mb3MYASADKAsyCS5FeGl0SW5mb1IFaW5mb3M=');
+@$core.Deprecated('Use exitInfoDescriptor instead')
 const ExitInfo$json = const {
   '1': 'ExitInfo',
   '2': const [
@@ -49,3 +59,6 @@ const ExitInfo$json = const {
     const {'1': 'timestamp', '3': 12, '4': 1, '5': 3, '10': 'timestamp'},
   ],
 };
+
+/// Descriptor for `ExitInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List exitInfoDescriptor = $convert.base64Decode('CghFeGl0SW5mbxIgCgtkZWZpbmluZ1VpZBgBIAEoBVILZGVmaW5pbmdVaWQSIAoLZGVzY3JpcHRpb24YAiABKAlSC2Rlc2NyaXB0aW9uEh4KCmltcG9ydGFuY2UYAyABKAVSCmltcG9ydGFuY2USHAoJcGFja2FnZUlkGAQgASgFUglwYWNrYWdlSWQSEAoDcGlkGAUgASgFUgNwaWQSIAoLcHJvY2Vzc25hbWUYBiABKAlSC3Byb2Nlc3NuYW1lEhAKA3BzcxgHIAEoA1IDcHNzEhgKB3JlYWxVaWQYCCABKAVSB3JlYWxVaWQSIwoGcmVhc29uGAkgASgOMgsuRXhpdFJlYXNvblIGcmVhc29uEhAKA3JzcxgKIAEoA1IDcnNzEhYKBnN0YXR1cxgLIAEoBVIGc3RhdHVzEhwKCXRpbWVzdGFtcBgMIAEoA1IJdGltZXN0YW1w');
